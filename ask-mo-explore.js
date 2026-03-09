@@ -67,7 +67,7 @@
         </div>
       `
     };
-
+ 
     const Hero = {
       setup() {
         const { ref, reactive, onMounted, onUnmounted, nextTick } = Vue;
@@ -265,7 +265,7 @@
           <div class="absolute bottom-20 -right-20 w-96 h-96 bg-brand-violet/15 rounded-full blur-3xl animate-float-delayed"></div>
           <div class="absolute top-1/2 left-1/3 w-64 h-64 bg-brand-yellow/10 rounded-full blur-3xl animate-float-slow"></div>
 
-          <div class="relative z-10 max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-12 items-center">
+          <div class="relative z-10 max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 askmo-grid-hero gap-12 items-center">
             <!-- Left: Headlines -->
             <div>
               <div class="inline-flex items-center gap-2 bg-white/10 text-white/80 text-sm font-medium px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
@@ -432,7 +432,7 @@
         </div>
       `
     };
-
+  
     const ProblemSolutionSection = {
       template: `
         <section id="how-it-works" class="py-24 bg-brand-navy border-t border-white/5">
@@ -441,7 +441,7 @@
               <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Stop hunting for reports. Just ask.</h2>
               <p class="text-lg text-gray-400 max-w-2xl mx-auto">No more exporting to Excel, building pivot tables, or waiting on IT. Ask Mo gets you answers in seconds.</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 askmo-grid-problem gap-8">
               <!-- Old Way -->
               <div class="bg-red-500/10 border border-red-500/20 rounded-2xl p-8">
                 <div class="flex items-center gap-3 mb-6">
@@ -519,7 +519,7 @@
         </section>
       `
     };
-
+ 
     const InteractiveDemo = {
       components: { DataTable },
       setup() {
@@ -870,7 +870,7 @@
             </div>
 
             <!-- Query Tiles -->
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+            <div class="grid grid-cols-1 askmo-grid-query-tiles gap-4 mb-8">
               <button v-for="q in queries" :key="q.title"
                       @click="handleTileClick(q)"
                       :disabled="activeQuery"
@@ -979,7 +979,7 @@
         </section>
       `
     };
-
+ 
     const HandOffToAI = {
       template: `
         <section class="py-24 bg-brand-navy border-t border-white/5 overflow-hidden">
@@ -989,7 +989,7 @@
               <p class="text-lg text-gray-400">Self-serve reporting built right into Momentus Enterprise.</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 relative">
+            <div class="grid grid-cols-1 askmo-grid-handoff gap-8 relative">
               <svg class="hidden md:block absolute top-16 left-0 w-full h-4 z-0" preserveAspectRatio="none">
                 <line x1="22%" y1="8" x2="46%" y2="8" stroke="rgba(255,255,255,0.15)" stroke-width="2" class="dashed-line"/>
                 <line x1="54%" y1="8" x2="78%" y2="8" stroke="rgba(255,255,255,0.15)" stroke-width="2" class="dashed-line"/>
@@ -1104,7 +1104,7 @@
         </section>
       `
     };
-
+  
     const { createApp } = Vue;
 
     const App = {
@@ -1144,4 +1144,4 @@
       `
     };
 
-    createApp(App).mount('#app');
+    createApp(App).mount('#askmo-app');
